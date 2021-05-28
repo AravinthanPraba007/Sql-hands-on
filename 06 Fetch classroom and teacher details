@@ -1,0 +1,11 @@
+SELECT * FROM public.classroom;
+/* 6. Fetch all classes and respective class teacher's name and age */
+
+UPDATE public.classroom SET teacher_id = 3 where classroom_id = 2;
+UPDATE public.classroom SET teacher_id = 6 where classroom_id = 3;
+UPDATE public.classroom SET teacher_id = 2 where classroom_id = 4;
+
+SELECT classroom.classroom_id, classroom.classroom_name, classroom.teacher_id, teacher.teacher_name, teacher.age
+FROM classroom
+INNER JOIN teacher ON classroom.classroom_id = teacher.teacher_id;
+

@@ -1,0 +1,11 @@
+/* 3. Delete 1 from Classes table */
+INSERT INTO public.classroom(classroom_id, classroom_name) VALUES (1, 'LKG');
+INSERT INTO public.classroom(classroom_id, classroom_name) VALUES (2, 'I std A sec');
+INSERT INTO public.classroom(classroom_id, classroom_name) VALUES (3, 'I std B sec');
+INSERT INTO public.classroom(classroom_id, classroom_name) VALUES (4, 'I std C sec');
+
+Select * from public.classroom;
+
+DELETE FROM public.classroom WHERE (classroom_id = 1);
+
+Select * from public.classroom;

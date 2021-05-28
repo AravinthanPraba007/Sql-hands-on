@@ -1,0 +1,9 @@
+
+INSERT INTO public.subject(subject_id, subject_name) VALUES (1, 'English');
+INSERT INTO public.subject(subject_id, subject_name) VALUES (2, 'Tamil');
+select * from public.subject;
+
+/*2. Add 2 new rows to Subjects */
+INSERT INTO public.subject(subject_id, subject_name) VALUES (3, 'Science');
+INSERT INTO public.subject(subject_id, subject_name) VALUES (4, 'Social');
+select * from public.subject;

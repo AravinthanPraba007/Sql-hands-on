@@ -1,0 +1,9 @@
+
+INSERT INTO public.teacher(teacher_id, teacher_name) VALUES (5,'Shiva');
+INSERT INTO public.teacher(teacher_id, teacher_name) VALUES (6,'Roja');
+
+/* 4. Update 2 columns in teachers table */
+UPDATE public.teacher SET teacher_name = 'Shiva R' where teacher_id = 5;
+SELECT * FROM public.teacher;
+
+

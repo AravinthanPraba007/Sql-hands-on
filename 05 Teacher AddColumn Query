@@ -1,0 +1,12 @@
+SELECT * FROM public.teacher;
+/*5. Add new column age -to teacher table */
+ALTER TABLE public.teacher ADD age INT;
+SELECT * FROM public.teacher;
+
+UPDATE public.teacher SET age = 32 WHERE (teacher_id = 1);
+UPDATE public.teacher SET age = 30 WHERE (teacher_id = 2);
+UPDATE public.teacher SET age = 25 WHERE (teacher_id = 3);
+UPDATE public.teacher SET age = 29 WHERE (teacher_id = 4);
+UPDATE public.teacher SET age = 40 WHERE (teacher_id = 5);
+UPDATE public.teacher SET age = 42 WHERE (teacher_id = 6);
+SELECT * FROM public.teacher;

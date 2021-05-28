@@ -1,0 +1,6 @@
+INSERT INTO public.teacher(teacher_id, teacher_name) VALUES (1,'Hema');
+INSERT INTO public.teacher(teacher_id, teacher_name) VALUES (2,'Reka');
+INSERT INTO public.teacher(teacher_id, teacher_name) VALUES (3,'Suresh');
+INSERT INTO public.teacher(teacher_id, teacher_name) VALUES (4,'Jeeva');
+/* 1. Fetch all data from teacher table */
+select * from public.teacher;
