@@ -1,0 +1,13 @@
+
+/* 9. Fetch all classes and respective class teacher's name, age and address */
+
+SELECT * from ((classroom
+LEFT JOIN teacher ON classroom.teacher_id = teacher.teacher_id)
+LEFT JOIN teacher_address ON teacher.teacher_id = teacher_address.teacher_id);
+
+
+SELECT classroom.classroom_id, classroom.classroom_name, classroom.teacher_id, 
+teacher.teacher_name, teacher.age, concat(teacher_address.address_line1 ,', ',teacher_address.adress_line2,', ',teacher_address.city,', ',teacher_address.pincode) AS Address
+from ((classroom
+LEFT JOIN teacher ON classroom.teacher_id = teacher.teacher_id)
+LEFT JOIN teacher_address ON teacher.teacher_id = teacher_address.teacher_id);

@@ -1,0 +1,15 @@
+/* 7. Fetch teachers, their subjects (a teacher can handle multiple subjects) */
+select * from subject;
+ ALTER TABLE subject ADD teacher_id INT;
+ ALTER TABLE subject ADD CONSTRAINT fk_teacher FOREIGN KEY (teacher_id) REFERENCES teacher(teacher_id);
+
+ UPDATE subject SET teacher_id = 3 WHERE subject_id = 1;
+ UPDATE subject SET teacher_id = 1 WHERE subject_id = 2;
+ UPDATE subject SET teacher_id = 2 WHERE subject_id = 3;
+ UPDATE subject SET teacher_id = 2 WHERE subject_id = 4;
+
+select teacher.teacher_id, teacher.teacher_name, teacher.age, subject.subject_name
+from teacher
+
+LEFT JOIN subject
+on teacher.teacher_id = subject.teacher_id;
